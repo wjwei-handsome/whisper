@@ -1,0 +1,18 @@
+[package]
+name = "whisper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.94"
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = "1.0.133"
+tokio = { version = "1.42.0", features = ["full"] }
+
+[[bin]]
+name = "server"
+path = "src/server.rs" # 服务端的入口文件
+
+[[bin]]
+name = "client"
+path = "src/client.rs" # 客户端的入口文件
